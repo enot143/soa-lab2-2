@@ -16,6 +16,6 @@ public class RoutePostDto implements Serializable {
     private CoordinateDto coordinates;
     private LocationDto from;
     private LocationDto to;
-    private int distance;
+    private double distance;
 }
 

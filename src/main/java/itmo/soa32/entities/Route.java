@@ -16,5 +16,5 @@ public class Route {
     private LocalDate creationDate;
     private Location from;
     private Location to;
-    private int distance;
+    private double distance;
 }

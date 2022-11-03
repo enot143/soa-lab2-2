@@ -27,7 +27,7 @@ public class RouteDAO {
         String URI = "https://localhost:" + PORT + "/soa-3-1.0-SNAPSHOT/routes?from_id=between:"
                 + idFrom + ":" + idFrom + "&to_id=between:" + idTo + ":" + idTo +
                 "&sort=" + order;
-        List<Route> routes = client.target(URI).request(MediaType.APPLICATION_JSON_TYPE).get(new GenericType<List<Route>>(){});
+        List<Route> routes = client.target(URI).request(MediaType.APPLICATION_JSON).get(new GenericType<List<Route>>(){});
         client.close();
         return Response.ok().entity(routes).build();
     }

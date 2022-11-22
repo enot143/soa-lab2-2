@@ -1,7 +1,5 @@
 package itmo.soa32.dto;
 
-import itmo.soa32.dto.CoordinateDto;
-import itmo.soa32.dto.LocationDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

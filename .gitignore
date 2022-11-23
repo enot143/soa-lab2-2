@@ -3,3 +3,4 @@ target
 localhost.keystore
 script_deploy.bat
 soa-3-2.iml
+application.properties

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("navigator")
 public class RouteController {
@@ -27,9 +28,9 @@ public class RouteController {
 
     @PostMapping(value = "route/add/{id-from}/{id-to}/{distance}")
     public ResponseEntity addRouteBetweenLocations(@PathVariable("id-from") Integer idFrom,
-                                             @PathVariable("id-to") Integer idTo,
-                                             @PathVariable("distance") double distance,
-                                             @Valid RouteDto routeDto) {
+                                                   @PathVariable("id-to") Integer idTo,
+                                                   @PathVariable("distance") double distance,
+                                                   @Valid @RequestBody RouteDto routeDto) {
         return routeService.addRouteBetweenLocations(idFrom, idTo, distance, routeDto);
     }
 }

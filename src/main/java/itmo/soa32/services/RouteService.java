@@ -25,6 +25,7 @@ public class RouteService {
     }
 
     public ResponseEntity addRouteBetweenLocations(Integer idFrom, Integer idTo, double distance, RouteDto routeDto) {
+        System.out.println(routeDto.toString());
         RoutePostDto routePost = new RoutePostDto();
         routePost.setDistance(distance);
         routePost.setName(routeDto.getName());
@@ -33,7 +34,7 @@ public class RouteService {
         routePost.setTo(new LocationDto(idTo));
         System.out.println(routePost);
         String URI = BASE_URL + "/routes";
-        return restTemplate.postForEntity(URI, routeDto, ResponseEntity.class);
+        return restTemplate.postForEntity(URI, routePost, ResponseEntity.class);
     }
 }
 
